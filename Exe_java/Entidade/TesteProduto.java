@@ -10,18 +10,16 @@ public class TesteProduto {
 
         Fornecedor forn2 = new Fornecedor("543212345", "8132314545", "Cláudio");
 
-        Produto prod1 = new Produto
-        (1,"TV LCD",3500,forn1);
+        Produto prod1 = new Produto(1, "TV LCD", 3500, forn1);
 
-        Produto prod2 = new Produto
-        (2,"notebook",2000, forn2);
+        Produto prod2 = new Produto(2, "notebook", 2000, forn2);
 
-        Produto prod3 = new Produto
-        (3, "impressora", 232, forn2);
+        Produto prod3 = new Produto(3, "impressora", 232, forn2);
 
+        System.out.println(prod2.getValor());
+        System.out.println(prod1.getNome());
+        System.out.println(prod3.getNome());
 
-        System.out.println(args[0]);
-        System.out.println(args[1]);
     }
 
 }
