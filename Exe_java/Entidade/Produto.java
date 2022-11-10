@@ -6,9 +6,10 @@ public class Produto {
     private float valor;
     private Fornecedor fornecedor;
     private ConjuntoProdutos ConjProd;
+
     public Produto() {
     }
-    
+
     public Produto(int codigo, String nome, float valor, Fornecedor fornecedor) {
         this.codigo = codigo;
         this.nome = nome;
@@ -16,8 +17,10 @@ public class Produto {
         this.fornecedor = fornecedor;
     }
 
-    public void atualizaPreco(float porcentagem){
-        this.valor = this.valor + (this.valor * (porcentagem/100));
+    public float atualizaPreco(Float porcentagem) {
+        this.valor = this.valor + (this.valor * (porcentagem / 100));
+        return this.valor;
+
     }
 
     public int getCodigo() {
