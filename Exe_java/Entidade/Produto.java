@@ -5,10 +5,10 @@ public class Produto {
     private String nome;
     private float valor;
     private Fornecedor fornecedor;
-
+    private ConjuntoProdutos ConjProd;
     public Produto() {
     }
-
+    
     public Produto(int codigo, String nome, float valor, Fornecedor fornecedor) {
         this.codigo = codigo;
         this.nome = nome;
@@ -16,14 +16,8 @@ public class Produto {
         this.fornecedor = fornecedor;
     }
 
-    public boolean atualizarPreco(float valorPro, float acrescimo) {
-        acrescimo = valorPro / 100;
-        if (valorPro > 0) {
-            valorPro += (valorPro * acrescimo);
-            return true;
-        } else {
-            return false;
-        }
+    public void atualizaPreco(float porcentagem){
+        this.valor = this.valor + (this.valor * (porcentagem/100));
     }
 
     public int getCodigo() {
@@ -48,6 +42,22 @@ public class Produto {
 
     public void setFornecedor(Fornecedor fornecedor) {
         this.fornecedor = fornecedor;
+    }
+
+    public void setCodigo(int codigo) {
+        this.codigo = codigo;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public ConjuntoProdutos getConjProd() {
+        return ConjProd;
+    }
+
+    public void setConjProd(ConjuntoProdutos conjProd) {
+        ConjProd = conjProd;
     }
 
 }

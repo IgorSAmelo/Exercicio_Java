@@ -1,8 +1,5 @@
 package Exe_java.Entidade;
 
-import Exe_java.Entidade.Produto;
-import Exe_java.Entidade.Fornecedor;
-
 public class TesteProduto {
 
     public static void main(String[] args) {
