@@ -3,25 +3,14 @@ package Exe_java.Entidade;
 import java.util.ArrayList;
 
 public class ConjuntoProdutos {
-    private String conjunto;
-    ArrayList<Produto> listaProd;
+
+    private ArrayList<Produto> listaProd;
 
     public ConjuntoProdutos() {
-        listaProd = new ArrayList<Produto>();
     }
 
-    public ConjuntoProdutos(String conjunto, ArrayList<Produto> listaProd) {
-        this.conjunto = conjunto;
+    public ConjuntoProdutos(ArrayList<Produto> listaProd) {
         this.listaProd = listaProd;
-        listaProd = new ArrayList<Produto>();
-    }
-
-    public String getConjunto() {
-        return conjunto;
-    }
-
-    public void setConjunto(String conjunto) {
-        this.conjunto = conjunto;
     }
 
     public ArrayList<Produto> getListaProd() {
@@ -32,9 +21,38 @@ public class ConjuntoProdutos {
         this.listaProd = listaProd;
     }
 
-    public void addProduto(Produto prod) {
-        prod.setConjProd(this);
-        listaProd.add(prod);
+    //inserir produto
+    public boolean inserirProduto(Produto novoProd) {
+        return this.listaProd.add (novoProd);   
     }
 
+    /*public Produto buscaProduto(Int codigo){
+        for (Produto produto : listaProd) {
+            if(produto().equals ()
+        }
+        return null;
+    }*/
+
+
 }
+
+/*
+ * public ConjuntoProdutos() {
+ * listaProd = new ArrayList<Produto>();
+ * }
+ * 
+ * public ConjuntoProdutos( ArrayList<Produto> listaProd) {
+ * 
+ * this.listaProd = listaProd;
+ * listaProd = new ArrayList<Produto>();
+ * }
+ * 
+ * 
+ * public ArrayList<Produto> getListaProd() {
+ * return listaProd;
+ * }
+ * 
+ * public void setListaProd(ArrayList<Produto> listaProd) {
+ * this.listaProd = listaProd;
+ * }
+ */
