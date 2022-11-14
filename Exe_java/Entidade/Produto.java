@@ -5,12 +5,9 @@ public class Produto {
     private String nome;
     private float valor;
     private Fornecedor fornecedor;
-    private ConjuntoProdutos ConjProd;
-
-    public Produto() {
-    }
 
     public Produto(int codigo, String nome, float valor, Fornecedor fornecedor) {
+        super();
         this.codigo = codigo;
         this.nome = nome;
         this.valor = valor;
@@ -20,15 +17,30 @@ public class Produto {
     public float atualizaPreco(Float porcentagem) {
         this.valor = this.valor + (this.valor * (porcentagem / 100));
         return this.valor;
-
     }
+
+    /*
+     * private void atualizarPreco(float valorPercentual) {
+     * float percentual = valorPercentual / 100;
+     * float valorFinal = this.getValor() + (percentual * this.getValor());
+     * this.setValor(valorFinal);
+     * }
+     */
 
     public int getCodigo() {
         return codigo;
     }
 
+    public void setCodigo(int codigo) {
+        this.codigo = codigo;
+    }
+
     public String getNome() {
         return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     public float getValor() {
@@ -45,22 +57,6 @@ public class Produto {
 
     public void setFornecedor(Fornecedor fornecedor) {
         this.fornecedor = fornecedor;
-    }
-
-    public void setCodigo(int codigo) {
-        this.codigo = codigo;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public ConjuntoProdutos getConjProd() {
-        return ConjProd;
-    }
-
-    public void setConjProd(ConjuntoProdutos conjProd) {
-        ConjProd = conjProd;
     }
 
 }
